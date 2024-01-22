@@ -3,7 +3,7 @@ import { useUser } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
 const style = {
-    nav: `bg-gray-800 h-20 flex justify-between items-center p-4`,
+    nav: `bg-gray-800 rounded-tr-2xl h-20 flex justify-between items-center p-4`,
     heading: `text-white text-3xl`
 }
 

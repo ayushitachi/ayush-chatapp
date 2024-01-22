@@ -8,7 +8,7 @@ import { useUser } from '../context/UserContext'
 
 const style = {
     main: `flex flex-col h-[80%] no-scrollbar overflow-scroll`,
-    sectionContainer: `flex flex-col h-[90vh] grow bg-gray-100 mt-10 shadow-xl border relative`,
+    sectionContainer: `flex flex-col rounded-br-2xl rounded-tr-2xl h-[90vh] grow bg-gray-100 mt-10 shadow-xl border relative`,
 };
 
 

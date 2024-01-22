@@ -17,7 +17,6 @@ function Home() {
     }
 
     useEffect(() => {
-        console.log(user)
         if (user == null) {
             navigate("/")
         }
@@ -27,8 +26,8 @@ function Home() {
 
     return (
         <div className="max-w-[740px] flex mx-auto text-center ">
-            <div className='flex flex-col h-[90vh] basis-[20%] bg-gray-100 mt-10 shadow-xl border relative'>
-                <div className='bg-gray-800 h-20 flex justify-center items-center p-4'>
+            <div className='flex flex-col h-[90vh] basis-[20%] rounded-l-2xl bg-gray-100 mt-10 shadow-xl border relative'>
+                <div className='bg-gray-800 h-20 flex rounded-tl-2xl justify-center items-center p-4'>
                     <h1 className='text-white text-3xl text-center'>
                         Users
                     </h1>

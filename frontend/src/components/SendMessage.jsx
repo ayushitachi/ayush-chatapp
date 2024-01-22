@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { socket } from '../socket';
 import { useUser } from '../context/UserContext';
+import SendIcon from '@mui/icons-material/Send';
 
 const style = {
-    form: `h-14 w-full max-w-[728px]  flex text-xl absolute bottom-0`,
-    input: `w-full text-xl p-3 bg-gray-900 text-white outline-none border-none`,
-    button: `w-[20%] bg-green-500`,
+    form: `h-14 rounded-br-2xl w-full max-w-[728px]  flex text-xl absolute bottom-0`,
+    input: `w-full text-xl rounded-full p-2 bg-gray-900 text-white outline-none border-none`,
+    button: `w-[10%] rounded-full font-semibold text-lg bg-green-500`,
 };
 
 const SendMessage = ({ scrollToBottom, targetUserId }) => {
@@ -30,16 +31,18 @@ const SendMessage = ({ scrollToBottom, targetUserId }) => {
 
     return (
         <form onSubmit={sendMessage} className={style.form}>
-            <input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                className={style.input}
-                type='text'
-                placeholder='Message'
-            />
-            <button className={style.button} type='submit'>
-                Send
-            </button>
+            <div className={`flex w-full ${style.input} `}>
+                <input
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    className="w-full text-lg rounded-full p-2 bg-gray-900 text-white outline-none border-none"
+                    type='text'
+                    placeholder='Message'
+                />
+                <button className={style.button} type='submit'>
+                    <SendIcon />
+                </button>
+            </div>
         </form>
     );
 };
