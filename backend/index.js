@@ -89,8 +89,27 @@ app.get("/allUsers", async (req, res) => {
   res.status(200).json({ user });
 });
 
+let onlineUsers = [];
+
 io.on("connection", (socket) => {
   console.log("a user connected");
+
+  // socket.on("userOnline", ({ userId }) => {
+  //   // io.emit("onlineUsers", msg);
+  //   if (!onlineUsers.includes(userId)) {
+  //     onlineUsers.push(userId);
+  //   }
+  //   io.emit("onlineUsers", onlineUsers);
+  // });
+
+  // socket.on("userOffline", ({ userId }) => {
+  //   // io.emit("onlineUsers", msg);
+  //   if (!onlineUsers.includes(userId)) {
+  //     let index = onlineUsers.indexOf(userId);
+  //     onlineUsers = onlineUsers.slice(index, 1);
+  //   }
+  //   io.emit("onlineUsers", onlineUsers);
+  // });
 
   // Handle joining a private chat room
   socket.on("joinRoom", async ({ userId, targetUserId }) => {
